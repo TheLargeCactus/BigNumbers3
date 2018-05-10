@@ -51,10 +51,10 @@ bool BitPack::setBit(size_t index, bool val)
 	}
 
 	if (val) {
-		_bits |= 1 << index;
+		_bits |= 1i64 << index;
 	}
 	else {
-		_bits &= ~(1 << index);
+		_bits &= ~(1i64 << index);
 	}
 
 	return val;
@@ -83,7 +83,7 @@ bool BitPack::getBit(size_t index)
 		exit(13);
 	}
 
-	return _bits & (1 << index);
+	return _bits & (1i64 << index);
 }
 
 std::string error(std::string msg)
