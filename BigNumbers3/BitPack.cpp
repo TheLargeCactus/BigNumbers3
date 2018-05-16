@@ -17,7 +17,7 @@ size_t BitPack::setSize(size_t size)
 			throw error("Size of BitPack cannot be greater than " + std::to_string(_max));
 		}
 	}
-	catch (const char * err) {
+	catch (std::string err) {
 		std::cerr << err << std::endl;
 		exit(13);
 	}
@@ -45,7 +45,7 @@ bool BitPack::setBit(size_t index, bool val)
 			throw error("index of input to setBit cannot be greater than " + std::to_string(_max));
 		}
 	}
-	catch (const char * err) {
+	catch (std::string err) {
 		std::cerr << err << std::endl;
 		exit(13);
 	}
@@ -78,7 +78,7 @@ bool BitPack::getBit(size_t index)
 			throw error("index of input to getBit cannot be greater than " + std::to_string(_max));
 		}
 	}
-	catch (const char * err) {
+	catch (std::string err) {
 		std::cerr << err << std::endl;
 		exit(13);
 	}
